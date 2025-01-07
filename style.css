@@ -4,6 +4,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
+    overflow-y: auto; /* Ensure vertical scrolling is enabled */
 }
 
 .container {
@@ -61,15 +62,16 @@ p {
     text-decoration: none;
     border-radius: 8px;
     font-size: 1.2rem;
-    
+    display: inline-block;
+    margin: 10px 0; /* Add vertical spacing between buttons */
+    width: 80%; /* Make buttons fill most of the width on mobile */
+    max-width: 300px; /* Limit the maximum width */
 }
-
 
 .cta-button.secondary {
     background: #191970; /* Different color for differentiation */
     border: 2px solid #191970; /* Optional: adds a border for a distinct look */
 }
-
 
 .ba-image {
     max-width: 150px;
@@ -81,9 +83,6 @@ p {
     border-radius: 52%; /* This makes the image circular */
     overflow: hidden; /* Ensures any content outside the border is hidden */
 }
-
-
-
 
 /* Benefits Section (Beige Background) */
 .benefits {
@@ -193,6 +192,7 @@ p {
     margin: 10px 0;
     text-align: left;
 }
+
 /* Data Grid */
 .data-grid {
     display: grid;
@@ -226,7 +226,6 @@ ul li {
     margin-bottom: 10px;
 }
 
-
 /* Footer Section */
 .footer {
     background: #191970;
@@ -251,3 +250,33 @@ ul li {
     text-decoration: underline;
 }
 
+/* Mobile-Friendly Styles */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .header {
+        padding: 50px 10px; /* Reduce padding for smaller screens */
+    }
+
+    .header h2 {
+        font-size: 1.8rem;
+    }
+
+    .header .cta-button {
+        padding: 15px 30px;
+        font-size: 1rem;
+        margin: 10px 0; /* Add spacing between buttons */
+        width: 80%; /* Ensure buttons are appropriately sized */
+        max-width: 300px;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.5rem;
+    }
+}
